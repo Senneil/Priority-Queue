@@ -31,7 +31,7 @@ return arrivalTime;
 
 public int compareTo (Patient other) {
 
-//Sort by priority first (lower number = higher priority)
+
 
 if (this.priority != other.priority) {
 
@@ -49,7 +49,7 @@ return this.arrivalTime.compareTo(other.arrivalTime);
 public String toString() {
 
 return "[P" + priority + "] " + name + " - " + condition + " (" + arrivalTime + ")";
-}
+    }
 
 }
 
@@ -102,48 +102,38 @@ List<Patient> list = new ArrayList<>(queue);
 
 Collections.sort(list);
 
-
-
 int count = 1;
-
 for (Patient p : list) {
-
 System.out.println(count + ". " + p);
 
 count++;
 
-}
-}
+        }
+    }
+ 
+ }
 
-}
 
-//Main class
 
 public class Triage {
 
 public static void main(String[] args) {
-
 ERQueue er = new ERQueue();
 
 
 
 er.arrive("Pedro Cruz", 1, "Head injury - NOW UNCONSCIOUS ⚠️", "23:52");
-
 er.arrive("Carlos Mendoza", 2, "Compound fracture - leg", "23:50");
-
 er.arrive("Lisa Wang", 2, "Severe asthma attack", "23:56");
-
 er.arrive("Maria Santos", 3, "Deep laceration on arm", "23:48");
-
 er.arrive("Ana Lim", 4, "Sprained ankle", "23:49");
 
 
 
 er.displayQueue();
-
 er.treatNext();
-
 er.displayQueue();
-}
+             }
 
 }
+
