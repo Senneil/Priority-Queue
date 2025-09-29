@@ -39,7 +39,7 @@ return Integer.compare(this.priority, other.priority);
 
 }
 
-//If same priority → compare by arrival time
+
 
 return this.arrivalTime.compareTo(other.arrivalTime);
 }
@@ -136,4 +136,3 @@ er.displayQueue();
              }
 
 }
-
